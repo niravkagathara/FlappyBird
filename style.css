@@ -184,3 +184,22 @@
         width: 6vw;
     }
 }
+/* Mobile and Tablet Styles */
+@media only screen and (max-width: 768px) { /* Mobile devices */
+    /* Mobile-specific styles */
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 769px) and (max-width: 1024px) { /* Tablets */
+    /* Tablet-specific styles */
+}
+
+/* Laptop and PC Styles */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) { /* Laptops and PCs */
+    /* Laptop and PC-specific styles */
+}
+
+/* TV Styles */
+@media only screen and (min-width: 1441px) { /* TVs and large screens */
+    /* TV-specific styles */
+}
