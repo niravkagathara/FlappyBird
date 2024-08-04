@@ -19,8 +19,7 @@ img.style.display = 'none';
 message.classList.add('messageStyle');
 
 document.addEventListener('keydown', (e) => {
-    
-    if(e.key == 'Enter' && game_state != 'Play'){
+    if((e.key == 'Enter' || e.key == ' ') && game_state != 'Play'){
         document.querySelectorAll('.pipe_sprite').forEach((e) => {
             e.remove();
         });
@@ -33,7 +32,34 @@ document.addEventListener('keydown', (e) => {
         message.classList.remove('messageStyle');
         play();
     }
+    if((e.key == 'Enter' || e.key == ' ') && game_state !== 'Play'){
+        startGame();
+    }
 });
+
+// Add the new code here
+document.addEventListener('keydown', (e) => {
+    if((e.key == 'Enter' || e.key == ' ') && game_state !== 'Play'){
+        startGame();
+    }
+});
+
+document.addEventListener('touchstart', () => {
+    if(game_state !== 'Play'){
+        startGame();
+    }
+});
+
+function startGame(){
+    // Reset game elements and start the game
+    // ... existing code ...
+    game_state = 'Play';
+    message.innerHTML = '';
+    score_title.innerHTML = 'Score : ';
+    score_val.innerHTML = '0';
+    message.classList.remove('messageStyle');
+    play();
+}
 
 function play(){
     function move(){
@@ -127,3 +153,5 @@ function play(){
     }
     requestAnimationFrame(create_pipe);
 }
+
+// ... existing code ...
