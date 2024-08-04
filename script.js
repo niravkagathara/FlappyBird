@@ -5,10 +5,10 @@ function updateGameSettings() {
     const width = window.innerWidth;
 
     if (width <= 768) { // Mobile devices
-        move_speed = 3;
+        move_speed = 2;
         gravity = 0.4;
     } else if (width <= 1024) { // Tablets
-        move_speed = 3;
+        move_speed = 2;
         gravity = 0.4;
     } else if (width <= 1440) { // Laptops
         move_speed = 3;
